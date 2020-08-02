@@ -1,0 +1,11 @@
+name: GriefDetection
+version: ${project.version}
+main: de.marvinleiers.griefdetection.GriefDetection
+api-version: 1.15
+authors: [Marvin2k0]
+website: www.marvinleiers.de
+
+commands:
+  snap:
+    aliases: [snapshot, inventorysnapshot, invsnap]
+    permission: griefdetection.snapshot
