@@ -11,13 +11,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.util.io.BukkitObjectInputStream;
-import org.bukkit.util.io.BukkitObjectOutputStream;
 
 import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
 
@@ -80,10 +77,11 @@ public class SnapshotCommand implements CommandExecutor
             catch (IOException | ClassNotFoundException e)
             {
                 e.printStackTrace();
+                return true;
             }
-
-            player.openInventory(inventory);
         }
+
+        player.openInventory(inventory);
 
         return true;
     }
